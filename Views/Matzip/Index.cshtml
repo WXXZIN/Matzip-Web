@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Data>
+
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+<div class="map_wrap">
+    <div id="drawingMap"></div>
+    <div id="map" style = "width: 100%; height: calc(100vh - 60px);"></div>
+    
+    <div id="markerList"></div>
+    </div>
+</div>
+
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b0cfccca31828908caa9df3456f19fe0&libraries=services"></script>
+<script>
+    // 모델 데이터를 JavaScript 변수로 가져오기
+    var modelData = @Html.Raw(Json.Serialize(Model));
+</script>

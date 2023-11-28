@@ -6,7 +6,6 @@ var markersModule = (function(mapModule) {
     var customOverlays = [];
 
     function handleMarkerClick(overlay) {
-        console.log(overlay.getPosition());
         map.panTo(overlay.getPosition());
         customOverlays.forEach(function(overlay) {
             overlay.setMap(null);
